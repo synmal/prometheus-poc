@@ -35,10 +35,9 @@ scrape_configs:
 
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
-
     static_configs:
-    - targets: ['short-rat-39.loca.lt']
+    - targets: ['54.251.68.58:9394']
 
   - job_name: 'docker'
     static_configs:
-    - targets: ['old-gecko-64.loca.lt', 'dangerous-hound-80.loca.lt']
+    - targets: ['175.41.181.234:9100', '175.41.181.234:8080', '54.251.68.58:9100', '54.251.68.58:8080']
