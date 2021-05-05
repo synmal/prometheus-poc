@@ -1,5 +1,11 @@
 version: "3.8"  # optional since v1.27.0
 services:
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager-poc
+    volumes:
+      - alertmanager-storage:/alertmanager
+      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus-poc
